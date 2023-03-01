@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://i.ibb.co/KhCtKTr/cute-dogs-logo-blank.png">
+    <title>Cute Dogs</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-icon-mobile">
+            <div class="nav-icon-open-mobile">
+                <i class="las la-bars"></i>
+            </div>
+            <div class="nav-icon-close-mobile">
+                <i class="las la-times"></i>
+            </div>
+        </div>
+        <div class="nav-logo">
+            <img src="https://i.ibb.co/KhCtKTr/cute-dogs-logo-blank.png" alt="logo-blank">
+        </div>
+        <div class="nav-option">
+            <ul class="nav-option-ul close-menu">
+                <li><button id="button-favorites"><i class="las la-bookmark"></i>Favorites Dogs</button></li>
+                <li><button id="button-upload"><i class="las la-cloud-upload-alt"></i>Upload</button></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="option-favorites closee">
+        <i class="las la-times close-favorites"></i>
+        <h1>Dogs favorites</h1>
+        <section class="option-favorites-content">
+        </section>
+    </div>
+    <div class="option-upload closee">
+        <i class="las la-times close-upload"></i>
+        <section class="option-upload-content">
+            <h1>Upload you image</h1>
+            <form id="uploadForm">
+                <input type="file" name="file" id="file">
+                <label for="file">
+                    <i class="las la-file-image"></i>
+                    <span class="iborrainputfile">Select an image</span>
+                </label>
+                <div id="preview">
+                    <img id ="previewImg">
+                </div>
+                <button type="button" id="buttonUpload" class="closee"><i class="las la-cloud-upload-alt"></i> Upload</button>
+                <div class="exitUpload">
+                </div>
+            </form>
+        </section>
+    </div>
+    <header>
+        <div class="header-capa"></div>
+            <section class="header-info">
+                <h1>Welcome to cute dog</h1>
+                <p>In this page can see and download images of dogs, and upload image of yours dogs, also can add the images favorites.</p>
+                <a href="#">See images</a>
+            </section>
+    </header>
+    <div class="main-container">
+        <section class="main-container-luck">
+            <p>Genera one image random of a dog</p>
+            <button id="luck">I have luck!</button>
+            <div class="main-container-luck-img">
+            </div>
+        </section>
+        <section class="main-container-imgs">
+            <p>Select the number of images, to generate</p>
+            <form action="">
+                <input type="number" placeholder="Number of images" id="number-imgs" required> 
+                <button id="button-add" type="button"><i class="las la-plus"></i></button>
+            </form>
+            <section class="main-container-imgs-content">
+                <p></p>
+            </section>
+        </section>
+    </div>
+    <footer>
+        <section class="footer-link">
+            <h1>Link</h1>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="favorites-dogs.html">Favorites Dogs</a></li>
+                <li><a href="upload.html">Upload</a></li>
+            </ul>
+        </section>
+        <section class="footer-logo">
+            <img src="https://i.ibb.co/YhMmKjq/cute-dogs-logo-white-footer.png" alt="cute-dogs-logo-white-footer">
+        </section>
+        <section class="footer-information">
+            <h1>Information</h1>
+            <ul>
+                <li><a href="https://thedogapi.com/" target="_blank">API</a></li>
+                <li><a href="https://www.luifereduardoo.com" target="_blank">Creator</a></li>
+            </ul>
+        </section>
+    </footer>
+    <script type="module" src="/script/main.js"></script>
+</body>
+</html>

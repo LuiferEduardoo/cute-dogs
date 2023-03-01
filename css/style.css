@@ -1,0 +1,345 @@
+:root{
+    --background-learnig: #fff;
+    --background-footer:#333;
+    --text-color-learnig: #333;
+    --text-color-learning: #fff;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.closee{
+    display: none;
+}
+.dark-background {
+    position: relative;
+}
+.dark-background::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.746);
+    z-index: 1;
+}
+/*Imgs Favorites*/
+.option-favorites,
+.option-upload{
+    position:fixed;
+    z-index: 1;
+    border-radius: 20px;
+    top: 80px;
+    left: 20%;
+    background-color: #fff;
+    width: 60%;
+    padding: 15px;
+    height: 80%;    
+}
+.close-favorites,
+.close-upload{
+    cursor: pointer;
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    font-size: 25px;
+}
+.option-favorites-content{
+    height: 86%;
+    overflow-x:auto;  
+    column-count: 4;
+    column-gap: 20px;
+}
+.option-favorites-content div{
+    position: relative;
+}
+.option-favorites-content div i{
+    color: red;
+    position: absolute;
+    margin: 10px 5px 0 0;
+    right: 2px;
+    cursor: pointer;
+    font-size: 25px;
+    background-color: white;
+    padding: 5px;
+    border-radius: 20px;
+}
+.option-favorites-content div i:hover{
+    filter: opacity(90%);
+}
+.option-favorites-content div i:focus {
+    background-color: red;
+    color: white; /* Agrega esta línea para cambiar el color del icono */
+}
+.option-favorites-content img{
+    width: 100%;
+    padding-bottom: 10px;
+    border-radius: 5px;
+}
+
+/*Option Uplpad */
+.option-upload{
+    padding: 10px 50px 80px 50px;
+    height: 72%;
+}
+#uploadForm{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    height: 400px;
+    overflow-y: auto;
+    background-color: #e8e8e8;
+    border-radius: 20px;
+}
+#file{
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+#file + label{
+    display: inline-block;
+    max-width: 80%;
+    cursor: pointer;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding: 0.625rem 1.25rem;
+    background-color: #3088e0;
+    border-radius: 20px;
+}
+#file + label i{
+    font-size: 25px;
+}
+
+#previewImg{
+    padding: 20px;
+    border-radius: 40px;
+    object-fit: cover;
+    width: 90%;
+}
+#buttonUpload{
+    background-color: #05a081;
+    font-weight: bold;
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+label:hover, 
+#buttonUpload:hover{
+    filter: opacity(90%);
+}
+.exitUpload{
+    margin-top: 10px;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 500px;
+}
+.exitUpload span{
+    font-weight: bold;
+}
+.exitUpload button{
+    margin-top: 20px;
+    cursor: pointer;
+    border: none;
+    color: #fff;
+	text-decoration: none;
+	background: #3088e0;
+	padding: 10px 20px;
+	border-radius: 100px;
+    display: flex;
+    align-items: center;
+}
+
+.exitUpload button:hover{
+    filter: opacity(90%);
+}
+/*Container luck*/
+.main-container-luck{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 30px 0 50px 0;
+    border-bottom: 1px solid #e8e8e8;
+    border-top: 1px solid #e8e8e8;
+}
+#luck{
+    cursor: pointer;
+    border: none;
+    color: #fff;
+	text-decoration: none;
+	background: #3088e0;
+	padding: 16px 37px;
+	display: inline-block;
+	border-radius: 50px;
+}
+.main-container-luck button:hover{
+    filter: opacity(80%);
+}
+.main-container-luck section{
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    width: 80%;
+}
+.main-container-luck section img{
+    border-radius: 10px;
+    width: 100%;
+    object-fit: cover;
+}
+.icon
+{
+    margin-top: 20px;
+    font-size: 30px;
+    display: flex;
+
+}
+#download, #add-favorite{
+    cursor: pointer;
+    border: none;
+    color: #fff;
+	text-decoration: none;
+	background: #3088e0;
+	padding: 10px 27px;
+	display: inline-block;
+	border-radius: 100px;
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+}
+
+#download{
+    background-color: #05a081;
+}
+
+/*Container imgs*/
+.main-container-imgs{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 0 50px 0;
+}
+form{
+    display: flex;
+    margin-bottom: 20px;
+}
+#number-imgs{
+    width: 300px;
+    height: 50px;
+    background: #b9bbbd;
+    border: none;
+    font-size: 10pt;
+    float: left;
+    padding-left: 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+#number-imgs:hover{
+    background-color: #dcddde;
+}
+#number-imgs:focus{
+    outline: none;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 5px #b9bbbd;
+}
+#button-add{
+    cursor: pointer;
+    border: none;
+    margin-left: -38px;
+    background: #b9bbbd;
+    border-radius: 5px;
+    color: #ffffff;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+#button-add:hover{
+    background-color: #dcddde;
+    transform: translateY(-2px);
+}
+#button-add:active{
+    background-color: #b9bbbd;
+    transform: translateY(2px);
+}
+.main-container-imgs-content{
+    column-count: 3;
+    column-gap: 20px;
+}
+.main-container-imgs-content div{
+    margin-bottom: 20px;
+    padding: 0 20px 0 20px;
+    cursor:pointer;
+}
+.information{
+    z-index: 1;
+    background-color: #fff;
+    padding: 30px;
+    width: 50%;
+    height: 80%;
+    height: auto;
+    position:fixed;
+    top: 100px;
+    left: 20%;
+    border-radius: 20px;
+    cursor: default;
+}
+.close-information-icon{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 22px;
+    cursor: pointer;
+}
+.main-container-imgs-content div img{
+    border-radius: 10px;
+    width: 100%;
+    object-fit: cover;
+}
+.main-container-imgs-content div section img{
+    text-align: center;
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+/* Barra de desplazamien */
+
+/* Establece el ancho y el color de la barra de desplazamiento */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+    background-color: #f5f5f5;
+}
+
+/* Establece el estilo del "cuerpo" de la barra de desplazamiento */
+::-webkit-scrollbar-thumb {
+    background-color: #555;
+    border-radius: 5px;
+}
+
+/* Establece el estilo del botón de la barra de desplazamiento */
+::-webkit-scrollbar-button {
+    background-color: #ccc;
+    border-radius: 5px;
+}
+
+/* Establece el estilo del riel de la barra de desplazamiento */
+::-webkit-scrollbar-track {
+    background-color: #f5f5f5;
+}
+
+
+@media (max-width: 800px)
+{
+}

@@ -1,0 +1,113 @@
+:root{
+    --text-color-menu-hover: #656f79;
+}
+.close-menu{
+    margin-left: -200px;
+}
+
+/* Menu */
+nav{
+    z-index: 1;
+    position:fixed;
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--background-learnig);
+    width: 100%;
+    height: 60px;
+    border-bottom: 1px solid #e8e8e8;
+}
+
+/* Menu mobile */
+.nav-icon-mobile{
+    font-size: 25px;
+    display: none;
+}
+.nav-logo img{
+    width: 80px;
+}
+.nav-option-ul{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    padding-right: 20px;
+}
+
+.nav-option ul li
+{
+    padding-left: 10px;
+}
+.nav-option ul li button{
+    cursor: pointer;
+    border: none;
+    border-radius: 24px;
+    height: 40px;
+    padding: 0 16px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+}
+#button-favorites{
+    background-color: #6fb9e7;
+    color: var(--text-color-learnig);
+}
+#button-upload{
+    background-color: #00AB6B;
+    color: #fff;
+}
+#nav-option ul li button:hover{
+    filter: opacity(80%);
+}
+button i{
+    font-size: 20px;
+    text-align: center;
+    padding-right: 5px;
+}
+@media (max-width: 800px){
+    /* Menu */
+    nav{
+        height: 50px;
+        transition: all .5s;
+    }
+    .nav-icon-close-mobile
+    {
+        display: none;
+        position: absolute;
+        left: 20px;
+        padding-top: 5px;
+        cursor: pointer;
+    }
+    /* Menu mobile */
+    .nav-icon-mobile, 
+    .nav-icon-open-mobile{
+        display: flex;
+        position: absolute;
+        left: 20px;
+        padding-top: 5px;
+        cursor: pointer;
+    }
+    .nav-logo img{
+        width: 70px;
+        position: absolute;
+        right: 0;
+    }
+
+    .nav-option-ul{
+        flex-direction: column;
+        position: absolute;
+        align-items: flex-start;
+        top: 50px;
+        left: 17px;
+        padding: 0;
+        transition: all .5s;
+    }
+
+    #button-favorites, 
+    #button-upload{
+        background-color: transparent;
+        color: var(--text-color-learnig);
+    }
+    #nav-option ul li button:hover{
+        filter: opacity(80%);
+    }
+}
